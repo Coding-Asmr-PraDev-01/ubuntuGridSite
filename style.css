@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --orange-color: #f04d0f;
+    --color-dark: #000000;
+    --color-grey: #eae5d9;  
+    --color--diff-faint: #dfc3a4;
+    --color-white: #ffffff;
+}
+
+html{
+    font-family: 'Aldrich', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff2fe;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 4rem 8rem;
+}
+
+.main .navbar{
+    background-color: var(--color-dark);
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+}
+
+.main .navbar .navigation .nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+}
+
+.main .navbar .navigation .nav-items .nav-item{
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.main .navbar .navigation .nav-items .nav-item .logoBx img{
+    width: 30px;
+}
+
+.main .navbar .navigation .nav-items .nav-item a{
+    color: var(--color-white);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main .navbar .navigation .nav-items .nav-item h3{
+    color: var(--color-white);
+}
+
+.main > .leftBx{
+    grid-column: 1 / 7;
+    background-color: var(--color-grey);
+    padding: 2rem 2.5rem;
+    border: 2px solid var(--color-dark);
+    border-bottom: none;
+}
+
+.main > .leftBx .searchBx{
+    max-width: 600px;
+    background-color: var(--color-white);
+    padding: 0.4rem;
+    border-radius: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 2px solid var(--color-dark);
+    margin-top: 1.3rem;
+}
+
+.main > .leftBx .searchBx input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.main > .leftBx .remainTextBx {
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main > .leftBx .remainTextBx .imgBxs{
+    display: flex;
+}
+
+.main > .leftBx .remainTextBx .imgBxs .imgBx{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--color-white);
+    margin-left: -10px;
+}
+
+.main > .leftBx .remainTextBx .imgBxs .imgBx img{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.main > .rightBx .imgBx{
+    background-color: var(--orange-color);
+    border: 2px solid var(--color-dark);
+    border-left: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main > .rightBx .imgBx img{
+    transform: scale(1.04) translateX(5px);
+}
+
+.mainHeading{
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.main .rightBx{
+    grid-column: 7 / -1;
+    grid-row: 2 / 3;
+}
+
+.btn{
+    background-color: var(--orange-color);
+    color: var(--color-white);
+    padding: 1rem 2.3rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn > span{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.div{
+    grid-column: 1 / 4;
+    background-color: var(--color--diff-faint);
+    padding: 1.5rem;
+    border: 2px solid var(--color-dark);
+    border-top: none;
+}
+
+.div .box{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.div .box h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.div .box h1{
+    font-size: 4rem;    
+    color: var(--orange-color);
+}
+
+.div .box h1 > span{
+    font-size: 2rem;
+}
+
+.div .box .dateBx{
+    align-self: flex-end;
+}
+
+.socialBx{
+    grid-column: 1 / 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0.6rem;
+    border: 2px solid var(--color-dark);
+    background-color: var(--color-grey);
+}
+
+.socialBx h3{
+    text-transform: uppercase;
+}
+
+.socialBx .iconBx img{
+    width: 230px;
+}
+
+.ratingBx{
+    grid-column: 4 / 7;
+    padding: 1.5rem;
+    border: 2px solid var(--color-dark);
+    border-left: none;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ratingBx h3{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.ratingBx .checkBx{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--orange-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.ratingBx .ratingStarBx{
+    display: flex;
+    gap: 1rem;
+}
+
+.fa-star{
+    color: var(--orange-color);
+}
+
+.bottomBx{
+    grid-column: 7 / -1;
+    grid-row: 3 / span 2;
+    /* background-color: var; */
+    border: 2px solid var(--color-dark);
+    border-left: none;
+    border-top: none;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.bottomBx .imgBx img{
+    max-width: 100%;
+    /* max-width: 300px; */
+}
+
+.bottomBx .textBx{
+    border-top: 3px solid var(--color-dark);
+}
+
+.bottomBx .textBx h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+@media(max-width: 1140px){
+    .main > .leftBx{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+
+    .main > .rightBx {
+        grid-row: 3 / span 1;
+        grid-column: 1 / -1;
+    }
+
+    .socialBx, .div, .ratingBx, .bottomBx{
+        grid-column: 1 / -1;
+    }
+
+    .bottomBx{
+        grid-row: 7;
+    }
+
+    .ratingBx, .bottomBx{
+        border-left: 2px solid var(--color-dark);
+    }
+
+    .socialBx{
+        border-top: none;
+        gap: 1rem;
+    }
+}
+
+@media(max-width: 991px){
+    .main{
+        padding: 2rem;
+    }
+
+    .mainHeading{
+        font-size: 2.5rem;
+    }
+}
